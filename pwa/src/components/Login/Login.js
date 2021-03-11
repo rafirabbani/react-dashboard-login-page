@@ -17,7 +17,8 @@ const Login = () => {
     })
       .then(data => data.json())
       .then((data) => {
-        localStorage.setItem('token', data.token);
+        console.log(data);
+        sessionStorage.setItem('token', data.token);
         history.push('/dashboard');
       })
       

@@ -21,17 +21,27 @@ for (var i = 0; i < a.length; i++) {
   b[i]= [a[i].value, Date.parse(a[i].date)];
 }
 
-console.log(b);
-
 const options = {
   chart: {
-    type: 'line'
+    type: 'line',
   },
   title: {
     text: 'My chart'
   }, 
   yAxis : {
     type: 'datetime'
+  },
+  xAxis : {
+    plotLines:[{
+      color: '#007bff',
+      width: 2,
+      value: 0.5
+    }, {
+      color: '#007bff',
+      width: 2,
+      value: 0.8
+    }],
+    max: 1
   },
   series: [
     {
